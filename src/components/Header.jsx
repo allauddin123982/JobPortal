@@ -10,13 +10,13 @@ const Header = () => {
         <img src="/logo.png" alt="" className='h-10' />
       </Link>
 
-      {/* <Button variant="outline"> Login</Button> */}
-      <SignedOut>
+      <Button variant="outline"> Login</Button>
+      {/* <SignedOut>
         <SignInButton />
       </SignedOut>
       <SignedIn>
         <UserButton />
-      </SignedIn>
+      </SignedIn> */}
     </nav>
   )
 }

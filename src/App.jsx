@@ -4,6 +4,8 @@ import LandingPage  from './Pages/landingpage' ;
 import OnBoarding  from './Pages/onboarding' ;
 import { ThemeProvider } from './components/ui/theme-provider';
 import './app.css'
+import Jobs from './Pages/jobs';
+import Postjob from './Pages/post-job';
 
 
 const router = createBrowserRouter([
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: '/onboarding',
         element: <OnBoarding/>
+      },
+      {
+        path: '/jobs',
+        element: <Jobs/>
+      },
+      {
+        path: '/post-job',
+        element: <Postjob/>
       }
     ]
   }

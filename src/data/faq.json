@@ -1,0 +1,30 @@
+[
+    {
+        "question": "What is Hired?",
+        "answer": "Hired is a job portal application designed to connect job seekers with employers. Our platform simplifies the job search process, allowing users to easily find, apply for, and manage job listings in various industries."
+    },
+    {
+        "question": "How do I post jobs?",
+        "answer": "To post jobs on Hired, you need to create an employer account. Once registered, you can log in and navigate to the 'Post a Job' section. Fill out the job details, including title, description, requirements, and salary, then submit your listing for review. Your job posting will go live shortly after approval."
+    },
+    {
+        "question": "How can I search for jobs?",
+        "answer": "You can search for jobs by entering keywords, job titles, or locations in the search bar. Use filters to narrow down your results based on job type, industry, and experience level."
+    },
+    {
+        "question": "Is there a fee to use Hired?",
+        "answer": "Job seekers can use Hired for free to search and apply for jobs. Employers may incur a fee for premium job postings or additional features, but basic job postings are often available at no charge."
+    },
+    {
+        "question": "How can I apply for a job?",
+        "answer": "Once you find a job you’re interested in, click on the job listing to view the details. From there, you can submit your application directly through the portal by uploading your resume and writing a cover letter if required."
+    },
+    {
+        "question": "Can I save job listings?",
+        "answer": "Yes! After creating an account, you can save job listings to your profile for easy access later. Simply click the 'Save' button on any job listing."
+    },
+    {
+        "question": "How can I contact support?",
+        "answer": "If you have any questions or need assistance, you can reach out to our support team through the 'Contact Us' section on the website. You can also send us an email at support@hired.com."
+    }
+]
