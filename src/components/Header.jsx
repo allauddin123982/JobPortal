@@ -12,6 +12,14 @@ import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
 
 const Header = () => {
   const [showSignIn, setShowSignIn] = useState(false);
+  //if user is not logged-in, route them to home page with search param sign-in true
+  const [search, setSearch] = useSearchParams();
+
+  useEffect(() => {
+    if(search.get("sign-in")) setShowSignIn(true)
+  },[search])
+
+
   const hadnleOverlayClick = (e) => {
     if(e.target === e.currentTarget){ 
       setShowSignIn(false)
@@ -19,12 +27,6 @@ const Header = () => {
     }
   } 
   
-  //if user is not logged in route them them to home page with search param sign-in true
-  const [search, setSearch] = useSearchParams();
-
-  useEffect(() => {
-    if(search.get("sign-in")) setShowSignIn(true)
-  },[search])
 
 
   return (

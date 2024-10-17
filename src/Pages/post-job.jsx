@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Postjob = () => {
+const PostJob = () => {
   return (
     <div>
       post-job
@@ -9,4 +9,4 @@ const Postjob = () => {
   )
 }
 
-export default Postjob
+export default PostJob
