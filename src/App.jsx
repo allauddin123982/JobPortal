@@ -9,6 +9,7 @@ import JobPage from "./Pages/job";
 import PostJob from "./Pages/post-job";
 import MyJobs from "./Pages/my-jobs";
 import SavedJobs from "./Pages/saved-jobs";
+import ProtectedRoute from "./components/protected-route";
 
 const router = createBrowserRouter([
   {
