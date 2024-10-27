@@ -1,10 +1,8 @@
-import React from 'react'
-
 const JobListing = () => {
   return (
     <div>
-      JOBListing
-      JOBListing
+      Jobs
+      fix the routing 
     </div>
   )
 }

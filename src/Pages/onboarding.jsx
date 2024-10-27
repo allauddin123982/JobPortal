@@ -1,12 +1,25 @@
 import { Button } from '@/components/ui/button';
 import { useUser } from '@clerk/clerk-react';
-import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { BarLoader } from 'react-spinners';
 
 const OnBoarding = () => {
   const {user, isLoaded} = useUser();
+  const navigate = useNavigate()
+  const handleRoleSelection = async(role) => {
+   //storing user role in a clerk
+   await user.update({
+    unsafeMetadata:{role},
+   }).then(() => {
+      navigate(role === 'recruiter' ? "/post-job" : "/jobs")
+   }).catch((error)=> console.log("error updating role",error))
+  }
+  
+
+
+  
   if(!isLoaded){
-    return <BarLoader className=' className="mb-4" width={"100%"} color="#36d7b7"'/>
+    return <BarLoader className="mb-4" width={"100%"} color="#36d7b7"/>
   }
   return (
     <div className="flex flex-col items-center justify-center mt-40">
@@ -17,14 +30,14 @@ const OnBoarding = () => {
       <Button
         variant="blue"
         className="h-36 text-2xl"
-        // onClick={() => handleRoleSelection("candidate")}
+        onClick={() => handleRoleSelection("candidate")}
       >
         Candidate
       </Button>
       <Button
         variant="destructive"
         className="h-36 text-2xl"
-        // onClick={() => handleRoleSelection("recruiter")}
+        onClick={() => handleRoleSelection("recruiter")}
       >
         Recruiter
       </Button>

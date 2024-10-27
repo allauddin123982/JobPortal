@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -18,8 +18,10 @@ import Autoplay from "embla-carousel-autoplay";
 import companies from "../data/companies.json";
 import faq from "../data/faq.json";
 const LandingPage = () => {
+ 
   return (
     <main className="flex flex-col gap-10 sm:gap-20 py-10 sm:py-20 ">
+      
       <section className="text-center">
         <h1 className="flex flex-col justify-center items-center text-4xl lg:text-6xl font-extrabold gradient-title">
           Find your dream job
@@ -96,7 +98,7 @@ const LandingPage = () => {
 
       <div>
         <Accordion type="single" collapsible className="w-full">
-        {faq.map(({ question, answer }, index) => {
+          {faq.map(({ question, answer }, index) => {
             return (
               <AccordionItem value={`item-${index}`} key={index}>
                 <AccordionTrigger>{question}</AccordionTrigger>
