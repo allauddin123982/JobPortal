@@ -2,7 +2,7 @@ const JobListing = () => {
   return (
     <div>
       Jobs
-      fix the routing 
+      
     </div>
   )
 }

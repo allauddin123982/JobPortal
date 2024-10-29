@@ -13,8 +13,8 @@ import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
 const Header = () => {
   const [showSignIn, setShowSignIn] = useState(false);
   const [search, setSearch] = useSearchParams();
-  const { user } = useUser();
-  const [userName, setUserName] = useState('')
+  // const { user } = useUser();
+  // const [userName, setUserName] = useState('')
   
   //if user is not logged-in, route them to home page with search param sign-in true
   useEffect(() => {
@@ -29,11 +29,11 @@ const Header = () => {
   };
 
 
-  const getFirstName = async () => {
-    const n = await user.externalAccounts[0].firstName;
-    setUserName(n)
-  };
-  getFirstName();
+  // const getFirstName = async () => {
+  //   const n = await user.externalAccounts[0].firstName;
+  //   setUserName(n)
+  // };
+  // getFirstName();
 
 
 
@@ -44,7 +44,7 @@ const Header = () => {
         <Link>
           <img src="/logo.png" alt="" className="h-10" />
         </Link>
-        <h4 className="text-2xl">{userName}</h4>
+        {/* <h4 className="text-2xl">{userName}</h4> */}
         <div className="flex gap-8">
           <SignedOut>
             <Button variant="outline" onClick={() => setShowSignIn(true)}>

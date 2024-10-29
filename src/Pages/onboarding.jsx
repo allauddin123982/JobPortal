@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { useUser } from '@clerk/clerk-react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BarLoader } from 'react-spinners';
 
@@ -12,10 +13,15 @@ const OnBoarding = () => {
     unsafeMetadata:{role},
    }).then(() => {
       navigate(role === 'recruiter' ? "/post-job" : "/jobs")
-   }).catch((error)=> console.log("error updating role",error))
-  }
+   }).catch((error)=> {console.log("error updating role",error)});
+  };
   
+  useEffect(()=> {
+    if(user?.unsafeMetadata?.role){
+      navigate(user?.unsafeMetadata?.role === 'recruiter' ? "/post-job" : "/jobs")
+    }
 
+  },[])
 
   
   if(!isLoaded){
