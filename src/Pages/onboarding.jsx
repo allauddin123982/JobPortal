@@ -21,7 +21,7 @@ const OnBoarding = () => {
       navigate(user?.unsafeMetadata?.role === 'recruiter' ? "/post-job" : "/jobs")
     }
 
-  },[])
+  },[user])
 
   
   if(!isLoaded){
